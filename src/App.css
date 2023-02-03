@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(236, 236, 236);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.container {
+  position: relative;
+  margin: 10px 10px;
+ }
+ .list {
+     position: relative;
+     width: 100%;
+     height: 170px;
+     margin: 5px auto 0;
+     padding: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     background-color: #fff;
+ }
+ 
+ ul li {
+     list-style: none;
+     background: #fff;
+     padding: 10px 20px;
+     transition: .5s;
+ }
+ 
+ li {
+     display: flex;
+     flex-direction: column;
+     padding-bottom: 10px;
+ }
+ 
+ li span {
+   font-weight: 800;
+   margin-bottom: 5px;
+ }
+ 
+ .list li:nth-child(4) {
+     background-color: red;
+     color: #fff;
+     border-radius: 100vmax;
+     padding: 10px 20px;
+     cursor: pointer;
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ .list li:nth-child(4):hover {
+  color: black;
+ }
+   
+   li:hover {
+     background-color: lightgray;
+   }
+   
+   .selected-user {
+     background-color: lightgray;
+     padding: 10px;
+     margin-bottom: 10px;
+   }
+   
+   .pagination {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 20px;
+     cursor: pointer;
+     font-weight: bolder;
+   }
+   
+   .pagination span {
+     padding: 0 8px;
+     margin-right: 15px;
+     border-radius: 50%;
+     font-size: 18px;
+   }
+   
+   .pagination span:hover {
+     background-color: lightgray;
+   }
+   .grid {
+     display: grid;
+     gap: 10px;
+     padding-block: 16px;
+     margin-inline: auto;
+     grid-template-columns: repeat(2, 1fr);
+     background-color: #fff;
+     margin-top: 50px;
+   }
+   
+   .grid button {
+     grid-column: span 2;
+     margin-inline: auto;
+     padding: 20px;
+     background-color: red;
+     color: #fff;
+     border: none;
+   }
+ 
+   .grid li {
+     padding: 20px;
+   }
+   .grid h2{
+     padding: 20px;
+   }
